@@ -10,9 +10,10 @@
     --color-secundario-verde: #8FB2A1;
     --color-neutro-beige: #F5F5DC;
     --color-texto-oscuro: #333333;
-    --color-texto-claro: #FFFFFF;
+    --color-texto-claro: #777A7A;
     --fuente-titulos: 'Montserrat', sans-serif;
     --fuente-cuerpo: 'Roboto', sans-serif;
+    --footer: #BCC4C4;
 }
 
 body {
@@ -141,7 +142,7 @@ header nav a:hover {
 
 /* FOOTER */
 footer {
-    background-color: var(--color-secundario-verde);
+    background-color: var(--footer);
     color: var(--color-texto-claro);
     padding: 2rem 1rem;
     text-align: center;
@@ -157,6 +158,7 @@ footer h3 {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+
 }
 
 .footer-redes a {
@@ -188,6 +190,8 @@ form input, form textarea, form select {
     font-family: var(--fuente-cuerpo);
     font-size: 1rem;
 }
+
+
 
 
 

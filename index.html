@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es"> <!-- es / español-->
+<head> <!-- sección que contiene metadatos, es decir, información sobre el documento web, 
+    como el título, la descripción y los enlaces a archivos CSS y JavaScript, 
+    que no son visibles directamente en la página del usuario-->
+    <meta charset="UTF-8"> <!-- estándar universal que asegura que los caracteres de cualquier idioma-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- le indica al navegador cómo controlar 
+    las dimensiones y el zoom de una página web en diferentes dispositivos-->
     <title>Meraki Consultorios Interdisciplinarios</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Le dice al navegador que se prepare para conectarse al servidor de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- aloja los archivos de las fuentes,para ejecutar mas rapido-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- El navegador descarga una hoja de 
+    estilos de Google que contiene las reglas que necesito-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="style.css"> <!-- link de CSS-->
 </head>
 <body>
-    <header>
+    <header> <!-- define el contenido introductorio o de navegación de una página o sección-->
         <a href="./index.html">
             <img src="./recursos/logo.jpg" alt="Logo Meraki Consultorios Interdisciplinarios" class="Img-logo">
         </a>
         
-        <nav>
+        <nav > <!-- define una sección de enlaces de navegación principal, menú-->
             <ul>
                 <li><a href="./index.html">INICIO</a></li>
                 <li><a href="./secciones/nosotros.html">NOSOTROS</a></li>
@@ -31,7 +37,7 @@
         </nav>
     </header>
 
-    <main>
+    <main> <!-- etiqueta semántica que se utiliza para definir el contenido principal y único de un documento-->
         <section class="hero">
             <h1>Acompañamiento Interdisciplinario</h1>
             <p>Un espacio de encuentro y crecimiento para toda la familia.</p>
@@ -55,13 +61,13 @@
         </section>
     </main>
 
-    <footer>
+    <footer> <!-- define el pie de página-->
         <div class="footer-info">
             <h3>NUESTRAS REDES Y CONTACTO</h3>
             <ul class="footer-redes">
-                <li><a href="https://www.instagram.com/meraki.citybell/" target="_blank">Instagram</a></li>
-                <li><a href="tel:+5491161267680">Teléfono</a></li>
-                <li><a href="mailto:merakiconsultorio@gmail.com">Mail</a></li>
+                <li> <img src="./recursos/instagram.png" alt=""> <a href="https://www.instagram.com/meraki.citybell/" target="_blank">Instagram</a></li>
+                <li> <img src="./recursos/phone.png" alt=""><a href="tel:+5491161267680">Teléfono</a></li>
+                <li> <img src="./recursos/at.png" alt=""><a href="mailto:merakiconsultorio@gmail.com">Mail</a></li>
             </ul>
         </div>
     </footer>
