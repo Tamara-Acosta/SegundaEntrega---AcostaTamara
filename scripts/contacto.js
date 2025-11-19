@@ -1,41 +1,37 @@
 
-//FUNCIONALIDAD DE FOCO/BLUR
-
+//funcionalidad foco / blur
 document.addEventListener('DOMContentLoaded', () => {
     // Seleccion de todos los campos de entrada (input, textarea, select)
     const campos = document.querySelectorAll('#formulario-contacto input, #formulario-contacto textarea, #formulario-contacto select');
 
     campos.forEach(campo => {
-        // Evento 'focus': Se dispara cuando el elemento toma el foco (hace click)
+        // Evento 'focus': Se dispara cuando el elemento hace click
         campo.addEventListener('focus', function() {
             this.classList.add('input-activo');
         });
 
-        // Evento 'blur': Se dispara cuando el elemento pierde el foco
+        // Evento blur: Se aplica cuando el elemento pierde el foco
         campo.addEventListener('blur', function() {
             this.classList.remove('input-activo');
         });
     });
 });
 
-// CONFIRMACIÓN DE ENVÍO DE FORMULARIO
-
+// confirmacion de envio del form
 document.addEventListener('DOMContentLoaded', () => {
     const formulario = document.getElementById('formulario-contacto');
-    const seccionContacto = document.querySelector('.seccion-contacto');
-
+    
     if (formulario) {
-        // Escuchamos el evento 'submit' (cuando el usuario hace clic en enviar)
+        //   evento 'submit' cuando el usuario/cliente  hace clic en enviar
         formulario.addEventListener('submit', function(e) {
-            // 1. Previene el envío por defecto (que recargaría la página)
+            //Previene el envío por defecto - recargaria la pag
             e.preventDefault(); 
-            
-            // 2. Obtener el valor de la solicitud seleccionada
+            // Obtiene el valor de la solicitud seleccionada
             const selectAsunto = document.getElementById('asunto');
             const asuntoSeleccionado = selectAsunto.options[selectAsunto.selectedIndex].text;
             const nombre = document.getElementById('nombre-contacto').value || "Cliente";
 
-            // 3. Crear el mensaje de confirmación
+            // mensaje de confirmación al final
             const mensajeConfirmacion = document.createElement('div');
             mensajeConfirmacion.classList.add('mensaje-confirmacion');
             mensajeConfirmacion.innerHTML = `
@@ -45,14 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button onclick="window.location.reload()" class="boton-contacto">Volver</button>
             `;
 
-            // 4. Ocultar el formulario y mostrar el mensaje
-            formulario.style.display = 'none';
-            
-            // Reemplaza el contenedor del formulario para que el mensaje quede en su lugar
+            // Oculta el formulario y mostrar el mensaje
             const contenedorFormulario = formulario.closest('.contenedor-formulario');
             if(contenedorFormulario) {
                 contenedorFormulario.innerHTML = ''; // Limpia el contenido anterior
-                contenedorFormulario.appendChild(mensajeConfirmacion);
+                contenedorFormulario.appendChild(mensajeConfirmacion); 
                 contenedorFormulario.style.textAlign = 'center';
             }
             

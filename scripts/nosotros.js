@@ -1,43 +1,35 @@
 
-//  DATOS: ARRAY DE OBJETOS (Variables, Constantes y Tipos de Datos)
-
+//  los datos de los profesionales dentro de un array
 const equipoProfesional = [
     {
         nombre: "Lic. Tamara Acosta",
         especialidad: "Psicología Infantil y Adolescente",
         trayectoria: "Más de 10 años en el campo del neurodesarrollo y apego seguro. Especialista en TCC.",
-        imagen: "../recursos/ana-perfil.jpg" 
+        imagen: "../recursos/psico.jfif" 
     },
     {
         nombre: "Lic. Mariel Garcia",
         especialidad: "Terapia Ocupacional",
         trayectoria: "Experiencia en integración sensorial y habilidades de la vida diaria. Certificado en Nivel 1 de T. O.",
-        imagen: "../recursos/juan-perfil.jpg"
+        imagen: "../recursos/terapista.jfif"
     },
     {
         nombre: "Lic. Dario Ramos",
         especialidad: "Fonoaudiología",
-        trayectoria: "Enfoque en dificultades de lenguaje expresivo y comprensivo en la primera infancia. Máster en Deglución.",
-        imagen: "../recursos/sofia-perfil.jpg"
-    },
-    {
-        nombre: "Lic. Kenny Castillo",
-        especialidad: "Neurología y Desarrollo",
-        trayectoria: "Especialista en diagnóstico e intervención temprana. Colabora en el área de investigación y docencia.",
-        imagen: "../recursos/carlos-perfil.jpg"
+        trayectoria: "Enfoque en dificultades de lenguaje expresivo y comprensivo y problemas de deglución. Máster en Deglución.",
+        imagen: "../recursos/imagenfono.jfif"
     }
 ];
 
-// 2. CONSTANTE: Captura el contenedor del DOM
+//llama al contenedor del DOM - nosotros.html
 const contenedorEquipo = document.getElementById('contenedor-equipo'); 
 
-
-// 3. ESTRUCTURA ITERATIVA: Uso de forEach
+// for Each para iterar / recorrer
 if (contenedorEquipo) {
-    // Iteracion sobre el array de profesionales para generar el HTML dinámicamente
+    // Iteracion sobre el array de profesionales para generar el HTML dinámico
     equipoProfesional.forEach(profesional => {
         
-        // HTML de la tarjeta
+        // el html de la tarjeta de cada profesional
         const tarjetaHTML = `
             <article class="tarjeta-profesional">
                 <img src="${profesional.imagen}" alt="Foto de ${profesional.nombre}">
@@ -47,9 +39,10 @@ if (contenedorEquipo) {
             </article>
         `;
 
-        //  HTML en el contenedor
+        //  html en el contenedor
         contenedorEquipo.innerHTML += tarjetaHTML;
     });
 } else {
+    // si hay un error, que me lo muestre en la consola 
     console.error("Error: No se encontró el contenedor con el ID 'contenedor-equipo'.");
 }
